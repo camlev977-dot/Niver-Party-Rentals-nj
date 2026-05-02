@@ -1,0 +1,343 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niver Party Rentals</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&family=Parisienne&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f7f5f1;
+  color:#2f2f2f;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+}
+
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+}
+
+.logo span{
+  display:block;
+  font-family:'Parisienne',cursive;
+  font-size:22px;
+  color:#74836f;
+}
+
+.nav-links a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#2f2f2f;
+  font-weight:500;
+}
+
+/* HERO */
+header{
+  padding:70px 8%;
+  background:linear-gradient(#ffffff,#f7f5f1);
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:50px;
+  align-items:center;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:70px;
+  line-height:0.95;
+}
+
+.hero h1 span{
+  font-family:'Parisienne',cursive;
+  color:#74836f;
+}
+
+.hero p{
+  margin:25px 0;
+  font-size:18px;
+  line-height:1.8;
+}
+
+.btn{
+  padding:14px 28px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+}
+
+.primary{
+  background:#74836f;
+  color:white;
+}
+
+.secondary{
+  border:2px solid #74836f;
+  color:#74836f;
+  margin-left:10px;
+}
+
+.balloon-box{
+  background:white;
+  border-radius:40px;
+  height:420px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:90px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* SECTIONS */
+section{
+  padding:90px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+}
+
+.section-title p{
+  margin-top:10px;
+  color:#666;
+}
+
+.packages{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.package{
+  background:white;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+.package h3{
+  font-family:'Parisienne',cursive;
+  font-size:36px;
+}
+
+.price{
+  color:#74836f;
+  font-weight:700;
+  margin:12px 0;
+}
+
+.package ul{
+  padding-left:20px;
+  line-height:1.9;
+}
+
+.addons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+
+.addon{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* CTA (BOOKING) */
+.cta{
+  text-align:center;
+  background:#74836f;
+  color:white;
+  padding:70px 25px;
+  border-radius:40px;
+  margin:90px 8%;
+}
+
+.cta h2{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.cta p{
+  font-size:18px;
+  line-height:1.7;
+}
+
+.cta .btn{
+  background:white;
+  color:#74836f;
+  margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#1f1f1f;
+  color:white;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+.hero{grid-template-columns:1fr;}
+.hero h1{font-size:50px;}
+nav{flex-direction:column;gap:15px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    NPR
+    <span>Niver Party Rentals</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="#packages">Packages</a>
+    <a href="#addons">Add-Ons</a>
+    <a href="#contact">Book</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <div>
+      <h1>Make Every Event <span>Unforgettable</span></h1>
+      <p>
+        Custom balloon arches, garlands, and backdrops designed to bring your celebration to life.
+        Playful, polished, and fully customized for your event.
+      </p>
+
+      <a href="#packages" class="btn primary">View Packages</a>
+      <a href="#contact" class="btn secondary">Book Now</a>
+    </div>
+
+    <div class="balloon-box">🎈</div>
+  </div>
+</header>
+
+<section id="packages">
+  <div class="section-title">
+    <h2>Package Guide</h2>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h3>Grab & Go Garland</h3>
+      <div class="price">$150+</div>
+      <ul>
+        <li>8ft garland</li>
+        <li>Up to 3 colors</li>
+        <li>Pickup only</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>The Essentials Collection</h3>
+      <div class="price">$275+</div>
+      <ul>
+        <li>Backdrop + garland</li>
+        <li>Custom wording</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>The Classic Celebration</h3>
+      <div class="price">$325+</div>
+      <ul>
+        <li>Backdrop + larger garland</li>
+        <li>Custom wording</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>The Signature Setup</h3>
+      <div class="price">$375+</div>
+      <ul>
+        <li>Layered backdrop</li>
+        <li>Full setup</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>Drapery Package</h3>
+      <div class="price">$450+</div>
+      <ul>
+        <li>10x10 draping</li>
+        <li>Custom color</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="addons">
+  <div class="section-title">
+    <h2>Enhancements & Add-Ons</h2>
+  </div>
+
+  <div class="addons">
+    <div class="addon">Specialty Balloons — $15+</div>
+    <div class="addon">Character Cut Outs — $25+</div>
+    <div class="addon">Specialty Text Backdrop — $25+</div>
+    <div class="addon">Custom Photo Backdrop — $50</div>
+    <div class="addon">Fresh or Faux Florals — $20+</div>
+    <div class="addon">Easel Rental — $15</div>
+    <div class="addon">Easel + Custom Sign — $50</div>
+    <div class="addon">Flower Bar — $100+</div>
+    <div class="addon">Custom Favors — $15+</div>
+    <div class="addon">Wood Backdrop Upgrade — $50</div>
+  </div>
+</section>
+
+<!-- NEW BOOKING SECTION -->
+<div class="cta" id="contact">
+  <h2>Ready to Book?</h2>
+  <p>
+    Email us at <strong>niverpartyrentals@gmail.com</strong><br>
+    or message us on Facebook to get started.
+  </p>
+
+  <a href="https://www.facebook.com/niverpartyrentals" target="_blank" class="btn">
+    Message on Facebook
+  </a>
+
+  <p style="margin-top:15px;font-size:14px;">
+    Facebook: @niverpartyrentals
+  </p>
+</div>
+
+<footer>
+  © 2026 Niver Party Rentals
+</footer>
+
+</body>
+</html>
