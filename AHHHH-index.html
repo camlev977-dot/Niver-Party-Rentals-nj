@@ -1,0 +1,376 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niver Party Rentals</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&family=Parisienne&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Poppins,sans-serif;
+  background:#f7f5f1;
+  color:#2f2f2f;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:white;
+}
+
+.logo{
+  font-family:Playfair Display,serif;
+  font-size:36px;
+}
+
+.logo span{
+  display:block;
+  font-family:Parisienne,cursive;
+  font-size:20px;
+  color:#74836f;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#2f2f2f;
+  font-weight:500;
+}
+
+header{
+  padding:70px 8%;
+  background:linear-gradient(#ffffff,#f7f5f1);
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:62px;
+  font-family:Playfair Display,serif;
+  line-height:1;
+}
+
+.hero h1 span{
+  font-family:Parisienne,cursive;
+  color:#74836f;
+  font-weight:400;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:18px;
+  line-height:1.7;
+}
+
+.btn{
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+  margin-top:10px;
+}
+
+.primary{
+  background:#74836f;
+  color:white;
+}
+
+.secondary{
+  border:2px solid #74836f;
+  color:#74836f;
+  margin-left:10px;
+}
+
+.balloon-box{
+  height:320px;
+  background:#e9e3d8;
+  border-radius:50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:85px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+section{
+  padding:70px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:42px;
+  font-family:Playfair Display,serif;
+}
+
+.section-title p{
+  color:#666;
+  margin-top:10px;
+}
+
+.packages{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.package{
+  background:white;
+  padding:25px;
+  border-radius:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.package h3{
+  font-family:Parisienne,cursive;
+  font-size:32px;
+  color:#2f2f2f;
+}
+
+.price{
+  color:#74836f;
+  font-weight:700;
+  margin:10px 0;
+  font-size:20px;
+}
+
+.package ul{
+  padding-left:20px;
+  line-height:1.8;
+}
+
+.addons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+
+.addon{
+  background:white;
+  padding:18px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 8px 18px rgba(0,0,0,0.06);
+  font-weight:500;
+}
+
+.cta{
+  text-align:center;
+  background:#74836f;
+  color:white;
+  padding:60px 20px;
+  border-radius:30px;
+  margin:60px 8%;
+}
+
+.cta h2{
+  font-family:Playfair Display,serif;
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.cta p{
+  font-size:18px;
+  line-height:1.7;
+}
+
+.cta .btn{
+  background:white;
+  color:#74836f;
+  margin-top:20px;
+}
+
+footer{
+  text-align:center;
+  padding:22px;
+  background:#1f1f1f;
+  color:white;
+}
+
+@media(max-width:800px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:46px;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav a{
+    margin:0 8px;
+  }
+
+  .secondary{
+    margin-left:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    NPR
+    <span>Niver Party Rentals</span>
+  </div>
+
+  <div>
+    <a href="#packages">Packages</a>
+    <a href="#addons">Add-Ons</a>
+    <a href="#contact">Book</a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <div>
+      <h1>Make Your Event <span>Unforgettable</span></h1>
+      <p>
+        Custom balloon arches, garlands, and backdrops designed to bring your celebration to life.
+        Stylish, affordable, and fully customizable for birthdays, showers, weddings, and special events.
+      </p>
+
+      <a href="#packages" class="btn primary">View Packages</a>
+      <a href="#contact" class="btn secondary">Book Now</a>
+    </div>
+
+    <div class="balloon-box">
+      🎈
+    </div>
+  </div>
+</header>
+
+<section id="packages">
+  <div class="section-title">
+    <h2>Package Guide</h2>
+    <p>Packages include setup, breakdown, and delivery within 15 miles of 08096.</p>
+  </div>
+
+  <div class="packages">
+
+    <div class="package">
+      <h3>Grab & Go Garland</h3>
+      <div class="price">$150+</div>
+      <ul>
+        <li>8ft garland</li>
+        <li>Up to 3 colors</li>
+        <li>Includes clamps for easy attachment</li>
+        <li>Pickup only</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>The Essentials Collection</h3>
+      <div class="price">$275+</div>
+      <ul>
+        <li>7ft fabric arch or circle backdrop</li>
+        <li>8ft balloon garland</li>
+        <li>Up to 3 colors</li>
+        <li>Custom wording on backdrop</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>The Classic Celebration</h3>
+      <div class="price">$325+</div>
+      <ul>
+        <li>7ft fabric arch or circle backdrop</li>
+        <li>8ft + 4ft balloon garland</li>
+        <li>Up to 3 colors</li>
+        <li>Custom wording on backdrop</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>The Signature Setup</h3>
+      <div class="price">$375+</div>
+      <ul>
+        <li>7ft + 6ft fabric arch backdrop</li>
+        <li>8ft + 4ft balloon garland</li>
+        <li>Up to 3 colors</li>
+        <li>Custom wording on backdrop</li>
+      </ul>
+    </div>
+
+    <div class="package">
+      <h3>Drapery Package</h3>
+      <div class="price">$450+</div>
+      <ul>
+        <li>10x10 square backdrop stand</li>
+        <li>Draping in custom color</li>
+        <li>Elegant backdrop setup</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="addons">
+  <div class="section-title">
+    <h2>Enhancements & Add-Ons</h2>
+  </div>
+
+  <div class="addons">
+    <div class="addon">Specialty Balloons — $15+</div>
+    <div class="addon">Character Cut Outs — $25+</div>
+    <div class="addon">Specialty Text Backdrop — $25+</div>
+    <div class="addon">Custom Photo Backdrop — $50</div>
+    <div class="addon">Fresh or Faux Florals — $20+</div>
+    <div class="addon">Easel Rental — $15</div>
+    <div class="addon">Easel + Custom Sign — $50</div>
+    <div class="addon">Flower Bar — $100+</div>
+    <div class="addon">Custom Favors — $15+</div>
+    <div class="addon">Wood Backdrop Upgrade — $50</div>
+  </div>
+</section>
+
+<div class="cta" id="contact">
+  <h2>Ready to Book?</h2>
+  <p>
+    Email us at <strong>niverpartyrentals@gmail.com</strong><br>
+    or message us on Facebook to get started.
+  </p>
+
+  <a href="https://www.facebook.com/niverpartyrentals" target="_blank" class="btn">
+    Message on Facebook
+  </a>
+
+  <p style="margin-top:15px;font-size:14px;">
+    Facebook: @niverpartyrentals
+  </p>
+</div>
+
+<footer>
+  © 2026 Niver Party Rentals
+</footer>
+
+</body>
+</html>
