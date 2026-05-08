@@ -5,503 +5,555 @@
 <title>Niver Party Rentals</title>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&family=Parisienne&display=swap');
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:#f7f5f1;
-  color:#2f2f2f;
+font-family:'Poppins',sans-serif;
+background:#f7f5f1;
+color:#2f2f2f;
+overflow-x:hidden;
 }
 
 /* NAV */
 
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:22px 8%;
-  background:white;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 5px 20px rgba(0,0,0,0.04);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 8%;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .logo{
-  font-family:'Playfair Display',serif;
-  font-size:40px;
-  line-height:1;
+font-family:'Playfair Display',serif;
+font-size:42px;
+line-height:1;
 }
 
 .logo span{
-  display:block;
-  font-family:'Parisienne',cursive;
-  font-size:22px;
-  color:#74836f;
+display:block;
+font-family:'Parisienne',cursive;
+font-size:22px;
+color:#7c8a73;
 }
 
 .nav-links a{
-  margin-left:25px;
-  text-decoration:none;
-  color:#2f2f2f;
-  font-weight:500;
+margin-left:25px;
+text-decoration:none;
+color:#2f2f2f;
+font-weight:500;
 }
 
 /* HERO */
 
 header{
-  padding:80px 8%;
-  background:
-    radial-gradient(circle at top left, #e8dfd2 0%, transparent 35%),
-    radial-gradient(circle at bottom right, #dce3d7 0%, transparent 35%),
-    linear-gradient(#ffffff,#f7f5f1);
+min-height:100vh;
+padding:80px 8%;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+
+background:
+radial-gradient(circle at top left,#e8dfd2 0%,transparent 35%),
+radial-gradient(circle at bottom right,#dce3d7 0%,transparent 35%),
+linear-gradient(#ffffff,#f7f5f1);
 }
 
 .hero{
-  display:grid;
-  grid-template-columns:1.1fr 0.9fr;
-  gap:50px;
-  align-items:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+width:100%;
 }
 
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:72px;
-  line-height:0.95;
+.hero-text h1{
+font-family:'Playfair Display',serif;
+font-size:78px;
+line-height:0.95;
+margin-bottom:25px;
 }
 
-.hero h1 span{
-  font-family:'Parisienne',cursive;
-  color:#74836f;
-  font-weight:400;
+.hero-text h1 span{
+font-family:'Parisienne',cursive;
+color:#7c8a73;
+font-weight:400;
 }
 
-.hero p{
-  margin:25px 0;
-  font-size:18px;
-  line-height:1.8;
+.hero-text p{
+font-size:18px;
+line-height:1.9;
+margin-bottom:35px;
+max-width:550px;
 }
 
 .btn{
-  padding:14px 28px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-  display:inline-block;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 25px rgba(0,0,0,0.12);
+padding:15px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+transition:0.3s;
 }
 
 .primary{
-  background:#74836f;
-  color:white;
+background:#7c8a73;
+color:white;
 }
 
-.secondary{
-  border:2px solid #74836f;
-  color:#74836f;
-  margin-left:10px;
+.primary:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
 }
 
-/* HERO IMAGE */
+/* HERO PHOTO */
 
 .hero-photo{
-  background:white;
-  border-radius:45px;
-  overflow:hidden;
-  box-shadow:0 25px 60px rgba(0,0,0,0.12);
-  animation:floatPhoto 4s ease-in-out infinite;
+position:relative;
 }
 
 .hero-photo img{
-  width:100%;
-  height:470px;
-  object-fit:cover;
-  display:block;
+width:100%;
+border-radius:35px;
+box-shadow:0 25px 55px rgba(0,0,0,0.15);
+animation:floatImage 4s ease-in-out infinite;
 }
 
-@keyframes floatPhoto{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
+@keyframes floatImage{
+0%,100%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
 }
 
-/* GENERAL */
+/* ANIMATED BALLOONS */
+
+.balloon{
+position:absolute;
+bottom:-200px;
+width:80px;
+animation:rise 14s infinite ease-in;
+opacity:0.9;
+}
+
+.balloon:before{
+content:"";
+position:absolute;
+width:80px;
+height:95px;
+border-radius:50%;
+}
+
+.balloon:after{
+content:"";
+position:absolute;
+width:2px;
+height:120px;
+background:#999;
+left:39px;
+top:90px;
+}
+
+.balloon1{
+left:5%;
+animation-duration:14s;
+}
+
+.balloon1:before{
+background:#dce3d7;
+}
+
+.balloon2{
+left:18%;
+animation-duration:18s;
+}
+
+.balloon2:before{
+background:#f0e7d8;
+}
+
+.balloon3{
+left:75%;
+animation-duration:16s;
+}
+
+.balloon3:before{
+background:#c6d0bf;
+}
+
+.balloon4{
+left:90%;
+animation-duration:20s;
+}
+
+.balloon4:before{
+background:#d8d8d8;
+}
+
+@keyframes rise{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+10%{
+opacity:1;
+}
+100%{
+transform:translateY(-130vh) rotate(12deg);
+opacity:0;
+}
+}
+
+/* SECTIONS */
 
 section{
-  padding:90px 8%;
+padding:90px 8%;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:50px;
+text-align:center;
+margin-bottom:50px;
 }
 
 .section-title h2{
-  font-family:'Playfair Display',serif;
-  font-size:48px;
-}
-
-.section-title p{
-  margin-top:10px;
-  color:#666;
+font-family:'Playfair Display',serif;
+font-size:50px;
+margin-bottom:10px;
 }
 
 /* GALLERY */
 
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .gallery img{
-  width:100%;
-  height:330px;
-  object-fit:cover;
-  border-radius:25px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.08);
-  transition:0.3s;
-  background:white;
+width:100%;
+height:340px;
+object-fit:cover;
+border-radius:25px;
+background:white;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
 .gallery img:hover{
-  transform:scale(1.03);
+transform:scale(1.03);
 }
 
 /* PACKAGES */
 
 .packages{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .package{
-  background:white;
-  padding:30px;
-  border-radius:25px;
-  box-shadow:0 15px 35px rgba(0,0,0,0.08);
-  transition:0.3s;
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
 .package:hover{
-  transform:translateY(-8px);
+transform:translateY(-8px);
 }
 
 .package h3{
-  font-family:'Parisienne',cursive;
-  font-size:36px;
+font-family:'Parisienne',cursive;
+font-size:38px;
+margin-bottom:10px;
 }
 
 .price{
-  color:#74836f;
-  font-weight:700;
-  margin:12px 0;
-  font-size:20px;
+font-weight:700;
+font-size:22px;
+color:#7c8a73;
+margin-bottom:15px;
 }
 
 .package ul{
-  padding-left:20px;
-  line-height:1.9;
+padding-left:20px;
+line-height:1.9;
 }
 
-/* ADDONS */
+/* CONTACT */
 
-.addons{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+.contact{
+margin:80px 8%;
+padding:70px;
+border-radius:40px;
+text-align:center;
+background:#7c8a73;
+color:white;
 }
 
-.addon{
-  background:white;
-  padding:20px;
-  border-radius:20px;
-  text-align:center;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+.contact h2{
+font-family:'Playfair Display',serif;
+font-size:50px;
+margin-bottom:20px;
 }
 
-/* CTA */
-
-.cta{
-  text-align:center;
-  background:#74836f;
-  color:white;
-  padding:70px 25px;
-  border-radius:40px;
-  margin:90px 8%;
+.contact p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:25px;
 }
 
-.cta h2{
-  font-family:'Playfair Display',serif;
-  font-size:48px;
-  margin-bottom:15px;
-}
-
-.cta p{
-  font-size:18px;
-  line-height:1.7;
-}
-
-.cta .btn{
-  background:white;
-  color:#74836f;
-  margin-top:20px;
+.contact a{
+background:white;
+color:#7c8a73;
 }
 
 /* FOOTER */
 
 footer{
-  text-align:center;
-  padding:25px;
-  background:#1f1f1f;
-  color:white;
+padding:25px;
+text-align:center;
+background:#222;
+color:white;
 }
 
 /* MOBILE */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
-  .hero{
-    grid-template-columns:1fr;
-  }
+.hero{
+grid-template-columns:1fr;
+}
 
-  .hero h1{
-    font-size:50px;
-  }
+.hero-text h1{
+font-size:55px;
+}
 
-  nav{
-    flex-direction:column;
-    gap:15px;
-  }
+nav{
+flex-direction:column;
+gap:15px;
+}
 
-  .nav-links a{
-    margin:0 8px;
-  }
+.nav-links a{
+margin:0 10px;
+}
 
-  .secondary{
-    margin-left:0;
-    margin-top:10px;
-  }
-
-  .hero-photo img{
-    height:360px;
-  }
+.contact{
+padding:45px 25px;
+}
 
 }
+
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">
-    NPR
-    <span>Niver Party Rentals</span>
-  </div>
+<!-- ANIMATED BALLOONS -->
 
-  <div class="nav-links">
-    <a href="#gallery">Photos</a>
-    <a href="#packages">Packages</a>
-    <a href="#addons">Add-Ons</a>
-    <a href="#contact">Book</a>
-  </div>
+<div class="balloon balloon1"></div>
+<div class="balloon balloon2"></div>
+<div class="balloon balloon3"></div>
+<div class="balloon balloon4"></div>
+
+<!-- NAV -->
+
+<nav>
+
+<div class="logo">
+NPR
+<span>Niver Party Rentals</span>
+</div>
+
+<div class="nav-links">
+<a href="#gallery">Photos</a>
+<a href="#packages">Packages</a>
+<a href="#contact">Book</a>
+</div>
+
 </nav>
+
+<!-- HERO -->
 
 <header>
 
-  <div class="hero">
+<div class="hero">
 
-    <div>
-      <h1>Make Every Event <span>Unforgettable</span></h1>
+<div class="hero-text">
 
-      <p>
-        Custom balloon arches, garlands, backdrops, and drapery designed to bring your celebration to life.
-        Playful, polished, and fully customized for your event.
-      </p>
+<h1>
+Make Every Event
+<span>Unforgettable</span>
+</h1>
 
-      <a href="#packages" class="btn primary">View Packages</a>
+<p>
+Custom balloon arches, garlands, backdrops, and drapery designed to bring your celebration to life with playful, stylish, and custom event setups.
+</p>
 
-      <a href="#contact" class="btn secondary">Book Now</a>
-    </div>
+<a href="#packages" class="btn primary">
+View Packages
+</a>
 
-    <div class="hero-photo">
-      <img src="images/package2.jpeg" alt="Niver Party Rentals">
-    </div>
+</div>
 
-  </div>
+<div class="hero-photo">
+
+<img src="./package2.jpeg" alt="Niver Party Rentals">
+
+</div>
+
+</div>
 
 </header>
 
+<!-- GALLERY -->
+
 <section id="gallery">
 
-  <div class="section-title">
-    <h2>Package Photos</h2>
-    <p>Browse package guides, setup styles, and upgrade options.</p>
-  </div>
+<div class="section-title">
+<h2>Package Photos</h2>
+</div>
 
-  <div class="gallery">
+<div class="gallery">
 
-    <img src="images/package1.jpeg" alt="">
-    <img src="images/package2.jpeg" alt="">
-    <img src="images/package3.jpeg" alt="">
-    <img src="images/package4.jpeg" alt="">
-    <img src="images/package5.jpeg" alt="">
-    <img src="images/package6.jpeg" alt="">
-    <img src="images/package7.jpeg" alt="">
+<img src="./package1.jpeg" alt="">
+<img src="./package2.jpeg" alt="">
+<img src="./package3.jpeg" alt="">
+<img src="./package4.jpeg" alt="">
+<img src="./package5.jpeg" alt="">
+<img src="./package6.jpeg" alt="">
+<img src="./package7.jpeg" alt="">
 
-  </div>
+</div>
 
 </section>
+
+<!-- PACKAGES -->
 
 <section id="packages">
 
-  <div class="section-title">
-    <h2>Package Guide</h2>
-    <p>Packages include setup, breakdown, and delivery within 15 miles of 08096.</p>
-  </div>
+<div class="section-title">
+<h2>Package Guide</h2>
+</div>
 
-  <div class="packages">
+<div class="packages">
 
-    <div class="package">
-      <h3>Grab & Go Garland</h3>
+<div class="package">
 
-      <div class="price">$150+</div>
+<h3>Grab & Go Garland</h3>
 
-      <ul>
-        <li>8ft balloon garland</li>
-        <li>Up to 3 colors</li>
-        <li>Includes clamps for easy attachment</li>
-        <li>Pre-assembled and ready for pickup</li>
-        <li>Pickup only — 08096 location</li>
-      </ul>
-    </div>
+<div class="price">$150+</div>
 
-    <div class="package">
-      <h3>The Essentials Collection</h3>
+<ul>
+<li>8ft balloon garland</li>
+<li>Up to 3 colors</li>
+<li>Includes clamps for attachment</li>
+<li>Pre-assembled for pickup</li>
+<li>Pickup only — 08096</li>
+</ul>
 
-      <div class="price">$275+</div>
+</div>
 
-      <ul>
-        <li>7ft fabric arch or circle backdrop</li>
-        <li>8ft balloon garland</li>
-        <li>Up to 3 colors</li>
-        <li>Custom wording on backdrop</li>
-        <li>Option for balloon columns</li>
-      </ul>
-    </div>
+<div class="package">
 
-    <div class="package">
-      <h3>The Classic Celebration</h3>
+<h3>The Essentials Collection</h3>
 
-      <div class="price">$325+</div>
+<div class="price">$275+</div>
 
-      <ul>
-        <li>7ft fabric arch or circle backdrop</li>
-        <li>8ft + 4ft balloon garland</li>
-        <li>Up to 3 colors</li>
-        <li>Custom wording on backdrop</li>
-        <li>Option to change to shimmer wall</li>
-      </ul>
-    </div>
+<ul>
+<li>7ft fabric arch or circle backdrop</li>
+<li>8ft balloon garland</li>
+<li>Custom wording on backdrop</li>
+<li>Up to 3 colors</li>
+</ul>
 
-    <div class="package">
-      <h3>The Signature Setup</h3>
+</div>
 
-      <div class="price">$375+</div>
+<div class="package">
 
-      <ul>
-        <li>7ft + 6ft fabric arch backdrop</li>
-        <li>8ft + 4ft balloon garland</li>
-        <li>Up to 3 colors</li>
-        <li>Custom wording on backdrop</li>
-        <li>Option for full balloon arch</li>
-      </ul>
-    </div>
+<h3>The Classic Celebration</h3>
 
-    <div class="package">
-      <h3>Drapery Package</h3>
+<div class="price">$325+</div>
 
-      <div class="price">$450+</div>
+<ul>
+<li>7ft backdrop setup</li>
+<li>8ft + 4ft balloon garland</li>
+<li>Custom wording included</li>
+<li>Option for shimmer wall</li>
+</ul>
 
-      <ul>
-        <li>10x10 square backdrop stand</li>
-        <li>Draping in custom color</li>
-        <li>Elegant and clean aesthetic</li>
-      </ul>
-    </div>
+</div>
 
-  </div>
+<div class="package">
 
-</section>
+<h3>The Signature Setup</h3>
 
-<section id="addons">
+<div class="price">$375+</div>
 
-  <div class="section-title">
-    <h2>Enhancements & Add-Ons</h2>
-  </div>
+<ul>
+<li>7ft + 6ft backdrop</li>
+<li>8ft + 4ft balloon garland</li>
+<li>Custom wording included</li>
+<li>Full balloon arch option</li>
+</ul>
 
-  <div class="addons">
+</div>
 
-    <div class="addon">Specialty Balloons — $15+</div>
+<div class="package">
 
-    <div class="addon">Character Cut Outs — $25+</div>
+<h3>Drapery Package</h3>
 
-    <div class="addon">Specialty Text Backdrop — $25+</div>
+<div class="price">$450+</div>
 
-    <div class="addon">Custom Photo Backdrop — $50</div>
+<ul>
+<li>10x10 square backdrop stand</li>
+<li>Custom draping color</li>
+<li>Elegant clean aesthetic</li>
+</ul>
 
-    <div class="addon">Fresh or Faux Florals — $20+</div>
+</div>
 
-    <div class="addon">Easel Rental — $15</div>
-
-    <div class="addon">Easel + Custom Sign — $50</div>
-
-    <div class="addon">Flower Bar — $100+</div>
-
-    <div class="addon">Custom Favors — $15+</div>
-
-    <div class="addon">Wood Backdrop Upgrade — $50</div>
-
-  </div>
+</div>
 
 </section>
 
-<div class="cta" id="contact">
+<!-- CONTACT -->
 
-  <h2>Ready to Book?</h2>
+<div class="contact" id="contact">
 
-  <p>
-    Email us at <strong>niverpartyrentals@gmail.com</strong><br>
-    or message us on Facebook to get started.
-  </p>
+<h2>Ready To Book?</h2>
 
-  <a href="https://www.facebook.com/niverpartyrentals" target="_blank" class="btn">
-    Message on Facebook
-  </a>
+<p>
+Email us at niverpartyrentals@gmail.com
+<br><br>
+Or message us on Facebook:
+<br>
+@niverpartyrentals
+</p>
 
-  <p style="margin-top:15px;font-size:14px;">
-    Facebook: @niverpartyrentals
-  </p>
+<a href="https://www.facebook.com/niverpartyrentals" target="_blank" class="btn">
+Message On Facebook
+</a>
 
 </div>
 
 <footer>
-  © 2026 Niver Party Rentals
+© 2026 Niver Party Rentals
 </footer>
 
 </body>
