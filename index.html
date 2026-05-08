@@ -7,14 +7,23 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&family=Parisienne&display=swap');
 
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   font-family:'Poppins',sans-serif;
   background:#f7f5f1;
   color:#2f2f2f;
 }
+
+/* NAV */
 
 nav{
   display:flex;
@@ -47,6 +56,8 @@ nav{
   color:#2f2f2f;
   font-weight:500;
 }
+
+/* HERO */
 
 header{
   padding:80px 8%;
@@ -95,8 +106,18 @@ header{
   box-shadow:0 12px 25px rgba(0,0,0,0.12);
 }
 
-.primary{background:#74836f;color:white;}
-.secondary{border:2px solid #74836f;color:#74836f;margin-left:10px;}
+.primary{
+  background:#74836f;
+  color:white;
+}
+
+.secondary{
+  border:2px solid #74836f;
+  color:#74836f;
+  margin-left:10px;
+}
+
+/* HERO IMAGE */
 
 .hero-photo{
   background:white;
@@ -118,6 +139,8 @@ header{
   50%{transform:translateY(-12px);}
 }
 
+/* GENERAL */
+
 section{
   padding:90px 8%;
 }
@@ -136,6 +159,8 @@ section{
   margin-top:10px;
   color:#666;
 }
+
+/* GALLERY */
 
 .gallery{
   display:grid;
@@ -157,6 +182,8 @@ section{
   transform:scale(1.03);
 }
 
+/* PACKAGES */
+
 .packages{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -171,7 +198,9 @@ section{
   transition:0.3s;
 }
 
-.package:hover{transform:translateY(-8px);}
+.package:hover{
+  transform:translateY(-8px);
+}
 
 .package h3{
   font-family:'Parisienne',cursive;
@@ -190,6 +219,8 @@ section{
   line-height:1.9;
 }
 
+/* ADDONS */
+
 .addons{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -203,6 +234,8 @@ section{
   text-align:center;
   box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
+
+/* CTA */
 
 .cta{
   text-align:center;
@@ -230,6 +263,8 @@ section{
   margin-top:20px;
 }
 
+/* FOOTER */
+
 footer{
   text-align:center;
   padding:25px;
@@ -237,13 +272,36 @@ footer{
   color:white;
 }
 
+/* MOBILE */
+
 @media(max-width:850px){
-  .hero{grid-template-columns:1fr;}
-  .hero h1{font-size:50px;}
-  nav{flex-direction:column;gap:15px;}
-  .nav-links a{margin:0 8px;}
-  .secondary{margin-left:0;margin-top:10px;}
-  .hero-photo img{height:360px;}
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .nav-links a{
+    margin:0 8px;
+  }
+
+  .secondary{
+    margin-left:0;
+    margin-top:10px;
+  }
+
+  .hero-photo img{
+    height:360px;
+  }
+
 }
 </style>
 </head>
@@ -265,42 +323,53 @@ footer{
 </nav>
 
 <header>
+
   <div class="hero">
+
     <div>
       <h1>Make Every Event <span>Unforgettable</span></h1>
+
       <p>
         Custom balloon arches, garlands, backdrops, and drapery designed to bring your celebration to life.
         Playful, polished, and fully customized for your event.
       </p>
 
       <a href="#packages" class="btn primary">View Packages</a>
+
       <a href="#contact" class="btn secondary">Book Now</a>
     </div>
 
     <div class="hero-photo">
-      <img src="images/package2.jpg" alt="Niver Party Rentals balloon setup">
+      <img src="images/package2.jpeg" alt="Niver Party Rentals">
     </div>
+
   </div>
+
 </header>
 
 <section id="gallery">
+
   <div class="section-title">
     <h2>Package Photos</h2>
     <p>Browse package guides, setup styles, and upgrade options.</p>
   </div>
 
   <div class="gallery">
-    <img src="images/package1.jpg" alt="Drapery Package">
-    <img src="images/package2.jpg" alt="Signature Setup">
-    <img src="images/package3.jpg" alt="Classic Celebration">
-    <img src="images/package4.jpg" alt="Essentials Collection">
-    <img src="images/package5.jpg" alt="Grab and Go Garland">
-    <img src="images/package6.jpg" alt="Upgrade Package Guide">
-    <img src="images/package7.jpg" alt="Package Guide">
+
+    <img src="images/package1.jpeg" alt="">
+    <img src="images/package2.jpeg" alt="">
+    <img src="images/package3.jpeg" alt="">
+    <img src="images/package4.jpeg" alt="">
+    <img src="images/package5.jpeg" alt="">
+    <img src="images/package6.jpeg" alt="">
+    <img src="images/package7.jpeg" alt="">
+
   </div>
+
 </section>
 
 <section id="packages">
+
   <div class="section-title">
     <h2>Package Guide</h2>
     <p>Packages include setup, breakdown, and delivery within 15 miles of 08096.</p>
@@ -310,7 +379,9 @@ footer{
 
     <div class="package">
       <h3>Grab & Go Garland</h3>
+
       <div class="price">$150+</div>
+
       <ul>
         <li>8ft balloon garland</li>
         <li>Up to 3 colors</li>
@@ -322,7 +393,9 @@ footer{
 
     <div class="package">
       <h3>The Essentials Collection</h3>
+
       <div class="price">$275+</div>
+
       <ul>
         <li>7ft fabric arch or circle backdrop</li>
         <li>8ft balloon garland</li>
@@ -334,7 +407,9 @@ footer{
 
     <div class="package">
       <h3>The Classic Celebration</h3>
+
       <div class="price">$325+</div>
+
       <ul>
         <li>7ft fabric arch or circle backdrop</li>
         <li>8ft + 4ft balloon garland</li>
@@ -346,7 +421,9 @@ footer{
 
     <div class="package">
       <h3>The Signature Setup</h3>
+
       <div class="price">$375+</div>
+
       <ul>
         <li>7ft + 6ft fabric arch backdrop</li>
         <li>8ft + 4ft balloon garland</li>
@@ -358,7 +435,9 @@ footer{
 
     <div class="package">
       <h3>Drapery Package</h3>
+
       <div class="price">$450+</div>
+
       <ul>
         <li>10x10 square backdrop stand</li>
         <li>Draping in custom color</li>
@@ -367,29 +446,45 @@ footer{
     </div>
 
   </div>
+
 </section>
 
 <section id="addons">
+
   <div class="section-title">
     <h2>Enhancements & Add-Ons</h2>
   </div>
 
   <div class="addons">
+
     <div class="addon">Specialty Balloons — $15+</div>
+
     <div class="addon">Character Cut Outs — $25+</div>
+
     <div class="addon">Specialty Text Backdrop — $25+</div>
+
     <div class="addon">Custom Photo Backdrop — $50</div>
+
     <div class="addon">Fresh or Faux Florals — $20+</div>
+
     <div class="addon">Easel Rental — $15</div>
+
     <div class="addon">Easel + Custom Sign — $50</div>
+
     <div class="addon">Flower Bar — $100+</div>
+
     <div class="addon">Custom Favors — $15+</div>
+
     <div class="addon">Wood Backdrop Upgrade — $50</div>
+
   </div>
+
 </section>
 
 <div class="cta" id="contact">
+
   <h2>Ready to Book?</h2>
+
   <p>
     Email us at <strong>niverpartyrentals@gmail.com</strong><br>
     or message us on Facebook to get started.
@@ -402,6 +497,7 @@ footer{
   <p style="margin-top:15px;font-size:14px;">
     Facebook: @niverpartyrentals
   </p>
+
 </div>
 
 <footer>
