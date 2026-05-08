@@ -142,83 +142,60 @@ animation:floatImage 4s ease-in-out infinite;
 
 /* ANIMATED BALLOONS */
 
-.balloon{
+.hero-balloon{
 position:absolute;
-bottom:-200px;
-width:80px;
-animation:rise 14s infinite ease-in;
-opacity:0.9;
-}
-
-.balloon:before{
-content:"";
-position:absolute;
-width:80px;
-height:95px;
+width:90px;
+height:110px;
 border-radius:50%;
+z-index:2;
+animation:floatBalloon 4s ease-in-out infinite;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.balloon:after{
+.hero-balloon::after{
 content:"";
 position:absolute;
 width:2px;
-height:120px;
-background:#999;
-left:39px;
-top:90px;
+height:90px;
+background:#888;
+left:44px;
+top:100px;
 }
 
-.balloon1{
-left:5%;
-animation-duration:14s;
-}
-
-.balloon1:before{
+.hero-balloon1{
 background:#dce3d7;
+top:-40px;
+left:-20px;
+animation-delay:0s;
 }
 
-.balloon2{
-left:18%;
-animation-duration:18s;
-}
-
-.balloon2:before{
+.hero-balloon2{
 background:#f0e7d8;
+top:40px;
+right:-30px;
+animation-delay:1s;
 }
 
-.balloon3{
-left:75%;
-animation-duration:16s;
+.hero-balloon3{
+background:#c7d0c0;
+bottom:-20px;
+left:40px;
+animation-delay:2s;
 }
 
-.balloon3:before{
-background:#c6d0bf;
+@keyframes floatBalloon{
+
+0%,100%{
+transform:translateY(0px);
 }
 
-.balloon4{
-left:90%;
-animation-duration:20s;
+50%{
+transform:translateY(-15px);
 }
 
-.balloon4:before{
-background:#d8d8d8;
 }
 
-@keyframes rise{
-0%{
-transform:translateY(0) rotate(0deg);
-opacity:0;
-}
-10%{
-opacity:1;
-}
-100%{
-transform:translateY(-130vh) rotate(12deg);
-opacity:0;
-}
-}
-
-/* SECTIONS */
+/* GENERAL */
 
 section{
 padding:90px 8%;
@@ -357,19 +334,16 @@ margin:0 10px;
 padding:45px 25px;
 }
 
+.hero-balloon{
+display:none;
+}
+
 }
 
 </style>
 </head>
 
 <body>
-
-<!-- ANIMATED BALLOONS -->
-
-<div class="balloon balloon1"></div>
-<div class="balloon balloon2"></div>
-<div class="balloon balloon3"></div>
-<div class="balloon balloon4"></div>
 
 <!-- NAV -->
 
@@ -412,6 +386,10 @@ View Packages
 </div>
 
 <div class="hero-photo">
+
+<div class="hero-balloon hero-balloon1"></div>
+<div class="hero-balloon hero-balloon2"></div>
+<div class="hero-balloon hero-balloon3"></div>
 
 <img src="./package2.jpeg" alt="Niver Party Rentals">
 
